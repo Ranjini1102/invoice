@@ -1,113 +1,225 @@
-# FlowGuard AI – Smart Invoice & Payment Tracking Platform
+# 🌿 FlowGuard AI – Smart Invoice & Payment Tracking Platform
 
-> **"Upload → Verify → Communicate → Approve → Track → Pay → Notify"**
+> **Upload → Verify → Communicate → Approve → Track → Pay → Notify**
 
-FlowGuard AI is a modern, responsive two-way invoice management and payment tracking platform connecting **Vendors** and **Company/Store Admins**. Modeled after e-commerce order tracking systems (like Flipkart/Amazon), it provides end-to-end transparency, AI-assisted verification, isolated 2-way invoice communication, and real-time payment completion notifications.
+🔗 **Live Demo:** https://invoice-iota-peach.vercel.app/
 
----
+## 📌 About the Project
 
-## 🎨 Visual Identity & Theme
-- **Strict Color Palette**: Pure White (`#FFFFFF`), Soft Mint (`#F4FBF6` / `#F7FCF8`), Primary Brand Green (`#16A34A`), Dark Green (`#15803D`), Soft Green (`#DCFCE7`), Dark Charcoal (`#1F2937`).
-- **Design Style**: Minimal, premium, professional FinTech SaaS aesthetic ("White dashboard + Green financial technology").
-- **Zero Distractions**: No blue, purple, or orange clutter. Status badges and indicators strictly adhere to the white/green palette.
+FlowGuard AI is a modern, responsive, AI-assisted invoice management and payment tracking platform connecting Vendors and Company/Store Administrators. Inspired by e-commerce tracking systems like Amazon and Flipkart, it provides end-to-end invoice visibility, document verification, two-way communication, approval workflows, and payment notifications.
 
----
+## ✨ Key Features
 
-## ✨ Key Features & USPs
+### 🛒 1. Flipkart-Style Invoice Tracking
+- Track invoices from upload to payment completion.
+- Visual timeline with real-time status updates.
+- Monitor verification, PO matching, company review, approval, and payment.
 
-### 1. 🛒 Flipkart-Style Invoice Tracking Timeline
-Step-by-step visual tracker for every invoice:
-1. `✓ Invoice Uploaded`
-2. `✓ AI Verification Completed`
-3. `✓ PO & Receipt Matched`
-4. `✓ Company Review`
-5. `✓ Approved`
-6. `● Payment Processing`
-7. `✓ Payment Completed`
+### 💬 2. Two-Way Invoice Communication
+- Dedicated chat thread for every invoice.
+- Communication between vendors and administrators.
+- Upload corrected invoices directly within conversations.
 
-### 2. 💬 Two-Way Invoice Communication Thread
-- Every invoice possesses its own **isolated 2-way discussion channel**.
-- Real-time chat between Vendor and Store Admin.
-- Enables uploading corrected invoices directly in-thread.
+### 🤖 3. FlowGuard AI Invoice Agent
+- Detect missing purchase orders and receipts.
+- Flag invoices pending approval for more than two days.
+- Send approaching due-date reminders.
+- Explain invoice delays and suggest resolution steps.
 
-### 3. 🤖 FlowGuard AI Invoice Agent
-- **Proactive Document Checks**: Detects missing POs or receipts.
-- **Approval Escalation**: Flags stuck invoices waiting > 2 days.
-- **Due Date Reminders**: Sends approaching due date alerts.
-- **Diagnostic Answers**: Explains why an invoice is delayed and provides instant resolution steps.
+### 🔍 4. AI OCR & PO Verification
+- Extract invoice numbers, vendor details, dates, amounts, and line items.
+- Compare invoice information against purchase orders.
+- Detect discrepancies and missing documents.
+- Example: Flag an invoice of ₹52,000 against a PO of ₹50,000.
 
-### 4. 🔍 AI OCR & PO Verification Engine
-- Extracts Invoice #, Vendor Name, Company Name, Amount, Dates, and Line Items.
-- Compares invoice against Purchase Order (PO) and flags discrepancies (e.g., *Invoice ₹52,000 vs PO ₹50,000*).
+### 🎉 5. Payment Completion Notifications
+- Update invoice status when payment is marked as completed.
+- Display a green success banner with a confetti animation.
+- Record transaction reference IDs.
+- Notify vendors through their dashboard.
 
-### 5. 🎉 Prominent Payment Completion Notification
-- Triggers instant **Celebratory Confetti & Green Banner Popup** when Company marks payment as `Paid`.
-- Updates timeline, logs transaction reference ID, and notifies Vendor notification center & dashboard.
+### ⚡ 6. One-Click Demo Scenario
+Demonstrate the complete invoice lifecycle:
 
----
+1. Upload invoice `INV-1024` for ₹52,000.
+2. Verify it against purchase order `PO-8842`.
+3. Review and approve the invoice.
+4. Move it to payment processing.
+5. Mark the invoice as paid.
+6. Display the payment completion modal with confetti.
 
-## 🚀 Quick Start Guide
+## 🎨 UI/UX Design & Visual Identity
 
-### Prerequisites
-- Node.js (v18+) & NPM
+FlowGuard AI features a premium FinTech SaaS interface with a modern white-and-green theme, elegant 3D-style cards, smooth animations, and responsive layouts.
 
-### Installation & Launching
+### Color Palette
 
-1. **Install Root & Server Dependencies**:
-   ```bash
-   cd server
-   npm install
-   ```
+| Color | Hex Code |
+|---|---|
+| Pure White | `#FFFFFF` |
+| Soft Mint | `#F4FBF6` |
+| Primary Green | `#16A34A` |
+| Dark Green | `#15803D` |
+| Soft Green | `#DCFCE7` |
+| Dark Charcoal | `#1F2937` |
 
-2. **Install Client Dependencies**:
-   ```bash
-   cd ../client
-   npm install
-   ```
+### Design Highlights
+- Premium white dashboard with soft mint backgrounds.
+- 3D-style cards with layered shadows and hover effects.
+- Glassmorphism-inspired panels.
+- Smooth transitions and interactive buttons.
+- Animated invoice tracking timelines.
+- Green success notifications and payment animations.
+- Responsive design for desktop, tablet, and mobile.
+- Consistent green status indicators without unnecessary blue, purple, or orange accents.
 
-3. **Run Backend Server** (Port 5000):
-   ```bash
-   cd server
-   npm start
-   ```
+## 👥 User Roles
 
-4. **Run Frontend Application** (Port 3000):
-   ```bash
-   cd client
-   npm run dev
-   ```
+### Vendor Dashboard
+- Upload invoices and supporting documents.
+- View AI verification results.
+- Track invoice approvals and payments.
+- Communicate with company administrators.
+- Upload corrected invoices.
+- Receive payment notifications.
 
-5. **Open Application**:
-   Navigate to [http://localhost:3000](http://localhost:3000)
+### Company / Store Admin Dashboard
+- View and manage submitted invoices.
+- Verify invoices against purchase orders.
+- Review discrepancies and missing documents.
+- Approve or reject invoices.
+- Update payment statuses.
+- Monitor pending approvals and overdue invoices.
 
----
+## 🛠️ Technology Stack
 
-## ⚡ 1-Click Presentation Demo Scenario
+| Layer | Technologies |
+|---|---|
+| Frontend | React.js, Vite |
+| Styling | CSS, Tailwind CSS |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas, when configured |
+| Real-Time Communication | Socket.IO |
+| AI Verification | OCR and invoice validation services |
+| Deployment | Vercel |
 
-To showcase the complete flow during a project presentation:
-1. Click the **`⚡ Demo Scenario`** button in the top navigation bar.
-2. The platform automatically executes:
-   - Vendor uploads `INV-1024` (₹52,000)
-   - AI cross-verifies against PO-8842
-   - Company reviews & approves
-   - Moves to Payment Processing
-   - Marks as Paid → **🎉 Payment Completed Modal with Confetti appears!**
+## 📂 Project Structure
 
----
-
-## 📁 Project Structure
-
-```
+```text
 flowguard-ai/
-├── client/                 # Vite + React + Tailwind CSS Frontend
+├── client/
+│   ├── public/
 │   ├── src/
-│   │   ├── components/     # FlipkartTimeline, AIVerificationCard, TwoWayChat, AIAgentWidget, PaymentCompletedModal
-│   │   ├── context/        # AppContext (Global State & Real-time Handlers)
-│   │   ├── pages/          # VendorDashboard, CompanyDashboard, InvoiceDetails, UploadInvoice, TrackingPage, etc.
-│   │   └── services/       # API integration layer
-├── server/                 # Express + Socket.IO Backend Server
-│   ├── server.js           # REST API routes & Socket broadcasts
-│   ├── aiService.js        # AI verification & FlowGuard Agent engine
-│   └── mockData.js         # Initial demo invoices (INV-1024, INV-1025, etc.)
+│   │   ├── components/
+│   │   │   ├── FlipkartTimeline.jsx
+│   │   │   ├── AIVerificationCard.jsx
+│   │   │   ├── TwoWayChat.jsx
+│   │   │   ├── AIAgentWidget.jsx
+│   │   │   └── PaymentCompletedModal.jsx
+│   │   ├── context/
+│   │   │   └── AppContext.jsx
+│   │   ├── pages/
+│   │   │   ├── VendorDashboard.jsx
+│   │   │   ├── CompanyDashboard.jsx
+│   │   │   ├── InvoiceDetails.jsx
+│   │   │   ├── UploadInvoice.jsx
+│   │   │   └── TrackingPage.jsx
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── package.json
+│   └── vite.config.js
+├── server/
+│   ├── server.js
+│   ├── aiService.js
+│   ├── mockData.js
+│   └── package.json
 └── README.md
 ```
+
+*Note: This structure represents the intended architecture. Actual filenames may differ.*
+
+## 🚀 Installation & Setup
+
+### Prerequisites
+- Node.js v18 or later
+- npm
+- MongoDB Atlas account, if using database integration
+
+### 1. Clone the Repository
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd flowguard-ai
+```
+
+### 2. Install Backend Dependencies
+
+```bash
+cd server
+npm install
+```
+
+### 3. Install Frontend Dependencies
+
+Open a separate terminal:
+
+```bash
+cd client
+npm install
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file inside the `server` directory:
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_atlas_connection_string
+```
+
+Add any additional environment variables required by your implementation. Never expose API keys or database credentials in your repository.
+
+### 5. Start the Backend
+
+```bash
+cd server
+npm start
+```
+
+### 6. Start the Frontend
+
+Open another terminal:
+
+```bash
+cd client
+npm run dev
+```
+
+Open the local URL displayed in your terminal. Vite typically uses `http://localhost:5173` unless configured otherwise.
+
+## 🔐 Security & Reliability
+- Role-based access for vendors and administrators.
+- Server-side invoice validation.
+- Secure document upload handling.
+- Environment-based configuration for credentials.
+- Audit trails for approval and payment updates.
+- Separation of demonstration data from real financial transactions.
+
+## 🎯 Project Objectives
+
+- Automate invoice verification and tracking.
+- Reduce manual processing and administrative workload.
+- Improve communication between vendors and companies.
+- Identify invoice discrepancies at an early stage.
+- Provide transparent payment status updates.
+- Reduce delays caused by missing documents and pending approvals.
+
+## 🌐 Live Demo
+
+**Explore FlowGuard AI:** https://invoice-iota-peach.vercel.app/
+
+---
+
+**FlowGuard AI — Smarter Invoices. Transparent Payments. Seamless Business Operations.**
